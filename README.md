@@ -9,7 +9,7 @@ AQW Connect is an AQW Client that uses a Discord Integration system to easily ch
 AQW Connect is a modified game client that allows integration of messages to and from the AQWorlds client to Discord. Essentially it will act as a more versatile means of interacting with players within the game as the program allows you to send and receive: Whispers, Party Chat, Guild Chat and Regular Chat through Discord as a medium.
 
 # How to Install?
-- Head over to https://github.com/CptShad/AQWConnectReleases/releases and download the latest release which should be in the format : AQW.Connect.VERSION.zip.
+- Head over to https://github.com/CptShad/AQWConnect/releases and download the latest release which should be in the format : AQW.Connect.VERSION.zip.
 - Once downloaded, Extract it and goto the 'Config' folder and open the 'Config.json' file to enter your Discord Token (Read Below for how).
 - Open the AQWConnect.exe file and you are off to the races!
 
