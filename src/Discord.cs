@@ -43,6 +43,8 @@ namespace AQWConnect
 		/// <returns></returns>
 		public async Task MessageReceived(SocketMessage Message)
 		{
+			if (!IsLogging)
+				return;
 			if (Message.Content.Contains("!msg ") && Message.Content.Contains(':'))
 			{
 				string message = Message.Content.Substring(Message.Content.IndexOf(':') + 1);
