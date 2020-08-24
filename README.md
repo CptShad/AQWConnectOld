@@ -25,7 +25,7 @@ In order to use the discord bot to log in-game messages, setting up a discord se
 - Follow the instructions here to Build / Make a Discord Bot. Just name it "AQW Connect" or Whatever you want to name the bot. Once you do that, Invite your Bot to the server.
       (https://discordpy.readthedocs.io/en/latest/discord.html)
 - Copy the Bot Token by clicking 'Click to Reveal Token' on Bot Tab of your Bot Application.
-- Paste that into the 'config.json' file in the 'Config' folder. Open the .json with notepad to edit it.
+- Paste that into the 'config.json' file in the 'Config' folder. Open the .json with notepad to edit it (Or open the game and click settings and paste the token in the "Token" field and click "Save Token"
 - You are done! Now just launch the game and click 'Connect Discord' to connect your bot to the game :).
 
 # How to log messages to the Discord Channel
@@ -40,6 +40,10 @@ At any time if you want to stop this, Just click 'Disconnect Discord'.
 
 - !DM [recipient]:[your message] \
   Sends a DM to the recipient. Example : !DM captain shad:Hey guys!.
+
+# Join our Discord!
+If you have any issues or just want to hang out and talk, Join our discord! \
+Join : https://discord.gg/Kvm54Gv
 
 # Donate
 Donations are much appreciated to aid future updates and development of the program :)
