@@ -51,18 +51,24 @@ namespace AQWConnect
 				string argument = Message.Content.Substring(5, Message.Content.IndexOf(':') - 5);
 				if (Message.Content.IndexOf(':') > 10)
 					argument = "zone";
+
+				message = AQMessage.XMLDecode(message);
 				AQMessage.Send(message, argument);
 				return;
 			}
 			if (Message.Content.Contains("!msg "))
             {
-				AQMessage.Send(Message.Content.Substring(5), "zone");
+				string message = "";
+				message = AQMessage.XMLDecode(Message.Content.Substring(5));
+				AQMessage.Send(message, "zone");
 				return;
 			}
 			if (Message.Content.Contains("!DM "))
 			{
 				string message = Message.Content.Substring(Message.Content.IndexOf(':') + 1);
 				string reciever = Message.Content.Substring(4, Message.Content.IndexOf(':') - 4);
+
+				message = AQMessage.XMLDecode(message);
 				AQMessage.SendDM(message, reciever);
 				return;
 			}
@@ -105,7 +111,7 @@ namespace AQWConnect
 		/// <param name="Sender"></param>
 		public void SendDiscordMessage(string Message, string Sender, bool IsWhisper = false)
 		{
-
+			Message = AQMessage.XMLDecode(Message);
 			if (IsWhisper && IsReady)
 			{
 				SendMessage($"[WHISPER  {Message.Split('%')[5]} -> {Message.Split('%')[6]}] : {Message.Split('%')[4]}", "whisper");

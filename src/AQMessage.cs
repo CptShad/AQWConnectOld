@@ -70,5 +70,25 @@ namespace AQWConnect
                 AQClient.Call("SendPacket", new string[] { XtMessage });
             }
         }
+
+        /// <summary>
+        /// XML decodes the AQW Packet String
+        /// </summary>
+        /// <param name="XMLEncoded"></param>
+        /// <returns></returns>
+        public static string XMLDecode(string XMLEncoded)
+        {
+            return XMLEncoded.Replace("#060:", "<").Replace("#062:", ">").Replace("#038:", "&").Replace("#037:", "%");
+        }
+
+        /// <summary>
+        /// XML encodes the regular message
+        /// </summary>
+        /// <param name="XMLDecoded"></param>
+        /// <returns></returns>
+        public static string XMLEncode(string XMLDecoded)
+        {
+            return XMLDecoded.Replace("<", "#060:").Replace(">", "#062:").Replace("&", "#038:").Replace("%", "#037:").Replace("“", "\"").Replace("”", "\"").Replace("‘", "\'").Replace("’", "\'");
+        }
     }
 }
